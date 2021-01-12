@@ -33,10 +33,6 @@ start_date, end_date = lease_duration(days = 1, hours = 0)
 # will allow for only relevant reservations to be displayed by the json dump
 reservation_list = []
 add_node_reservation(reservation_list, count = server_count, node_type = node_type)
-add_fip_reservation(reservation_list, count = 1)
-add_network_reservation(reservation_list, network_name, of_controller_ip = None,
-                        of_controller_port = None, vswitch_name = None,
-                        physical_network = 'physnet1')
 
 # Create the lease
 create_lease(lease_name = lease_name, reservations = reservation_list,
