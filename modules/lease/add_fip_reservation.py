@@ -34,7 +34,6 @@ end_date   = (datetime.now(tz=tz.tzutc()) + timedelta(days=1)).strftime(BLAZAR_T
 # NOTE: For docs you can pick and choose which reservations... Commenting out or removing lines
 # will allow for only relevant reservations to be displayed by the json dump
 reservation_list = []
-add_node_reservation(reservation_list, count=server_count, node_type=node_type)
 add_fip_reservation(reservation_list, count=1)
 
 # Create the lease
