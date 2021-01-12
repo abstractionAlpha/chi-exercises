@@ -1,0 +1,8 @@
+# This rule ignores class files
+*.pem
+
+# This rule ignores temporary files that end with ~
+*~
+
+# This rule ignores the contents of the .settings directory that text editors will sometimes make
+.settings/
