@@ -1,4 +1,4 @@
-# This rule ignores class files
+# This rule ignores PEM files
 *.pem
 
 # This rule ignores temporary files that end with ~
