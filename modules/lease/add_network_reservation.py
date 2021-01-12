@@ -30,7 +30,7 @@ end_date   = (datetime.now(tz=tz.tzutc()) + timedelta(days=1)).strftime(BLAZAR_T
 # NOTE: For docs you can pick and choose which reservations... Commenting out or removing lines
 # will allow for only relevant reservations to be displayed by the json dump
 reservation_list = []
-chi.lease.add_network_reservation(reservation_list, network_name, of_controller_ip=None, of_controller_port=None, vswitch_name=None, physical_network='physnet1')
+add_network_reservation(reservation_list, network_name, of_controller_ip=None, of_controller_port=None, vswitch_name=None, physical_network='physnet1')
 
 
 # Create the lease
