@@ -44,6 +44,6 @@ add_network_reservation(reservation_list, network_name, of_controller_ip=None,
 create_lease(lease_name = lease_name, reservations = reservation_list,
                 start_date = start_date, end_date = end_date)
 
-# Get the Lease ID
+# Get the lease ID
 lease_id = get_lease_id(lease_name) # This fails if there are multiple leases by the same name
 print(lease_id)
