@@ -37,11 +37,9 @@ end_date   = (datetime.now(tz=tz.tzutc()) + timedelta(days=1)).strftime(BLAZAR_T
 reservation_list = []
 add_node_reservation(reservation_list, count=server_count, node_type=node_type)
 add_fip_reservation(reservation_list, count=1)
-add_network_reservation(reservation_list, network_name, of_controller_ip=None, of_controller_port=None, vswitch_name=None, physical_network='physnet1')
+add_network_reservation(reservation_list, network_name, of_controller_ip=None,
+                        of_controller_port=None, vswitch_name=None, physical_network='physnet1')
 
 # Create the lease
-chi.blazar().lease.create(name = lease_name,
-                            start = start_date,
-                            end = end_date,
-                            reservations = reservation_list,
-                            events = [])
+create_lease(lease_name = lease_name, reservations = reservation_list,
+                start_date = start_date, end_date = end_date)
