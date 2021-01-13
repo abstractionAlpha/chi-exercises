@@ -17,12 +17,7 @@ key_name = 'my_chameleon_key' # Change to your keypair name
 
 # We will name resources based on our environment username for easy identification
 username = os.getenv("USER") # OS username. Can be replaced with any username of choice
-server_name = username+'Server'
 lease_name = username+'Lease'
-
-# Set server attributes
-node_type = 'compute_skylake'
-server_count = 1
 
 # Set start/end date for lease
 # Start one minute into future to avoid Blazar thinking lease is in past due to rounding to closest

@@ -17,8 +17,6 @@ key_name = 'my_chameleon_key' # Change to your keypair name
 
 # We will name resources based on our environment username for easy identification
 username = os.getenv("USER") # OS username. Can be replaced with any username of choice
-server_name = username+'Server'
-network_name = username+'Net'
 lease_name = username+'Lease'
 
 # Set server attributes
